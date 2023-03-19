@@ -10,7 +10,7 @@
 
     <groupId>io.trino.hadoop</groupId>
     <artifactId>hadoop-apache</artifactId>
-    <version>3.2.0-19-SNAPSHOT</version>
+    <version>3.2.0-18</version>
 
     <name>hadoop-apache</name>
     <description>Shaded version of Apache Hadoop for Trino</description>
@@ -34,7 +34,7 @@
         <connection>scm:git:git://github.com/trinodb/trino-hadoop-apache.git</connection>
         <developerConnection>scm:git:git://github.com/trinodb/trino-hadoop-apache.git</developerConnection>
         <url>https://github.com/trinodb/trino-hadoop-apache</url>
-        <tag>HEAD</tag>
+        <tag>3.2.0-18</tag>
     </scm>
 
     <properties>
@@ -50,7 +50,7 @@
             <groupId>org.apache.hadoop</groupId>
             <artifactId>hadoop-common</artifactId>
             <version>${dep.hadoop.version}</version>
-            <exclusions>
+		    <exclusions>
                 <exclusion>
                     <groupId>org.apache.hadoop</groupId>
                     <artifactId>hadoop-mapreduce-client-app</artifactId>
@@ -344,7 +344,7 @@
 
         <dependency>
             <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-nop</artifactId>
+            <artifactId>slf4j-jdk14</artifactId>
             <version>${dep.slf4j.version}</version>
             <scope>runtime</scope>
         </dependency>
